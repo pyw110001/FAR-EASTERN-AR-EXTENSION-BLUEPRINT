@@ -7,8 +7,8 @@ export const TechSpecs: React.FC = () => {
     <section className="py-24 bg-neutral-900 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 md:px-20">
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif text-white mb-4">技术实力</h2>
-          <p className="text-gold-500 font-mono text-sm uppercase tracking-widest">驱动未来的坚实核心</p>
+          <h2 className="text-3xl md:text-4xl font-serif text-white mb-4">技術實力</h2>
+          <p className="text-gold-500 font-mono text-sm uppercase tracking-widest">驅動未來的堅實核心</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -47,9 +47,9 @@ export const TechSpecs: React.FC = () => {
            transition={{ delay: 0.5 }}
            className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-gold-900/20 to-neutral-900 border border-gold-500/10 text-center"
         >
-            <h3 className="text-2xl font-serif text-white mb-2">共同开启建筑交互新纪元</h3>
+            <h3 className="text-2xl font-serif text-white mb-2">共同開啟建築交互新紀元</h3>
             <p className="text-neutral-400 max-w-2xl mx-auto text-sm">
-              为参观者、管理者与决策者提供前所未有的交互体验。
+              為參觀者、管理者與決策者提供前所未有的交互體驗。
             </p>
         </motion.div>
       </div>

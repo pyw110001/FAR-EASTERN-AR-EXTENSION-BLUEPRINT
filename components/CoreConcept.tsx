@@ -15,20 +15,20 @@ export const CoreConcept: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-serif mb-8 text-white">
-            从<span className="text-neutral-500 line-through decoration-gold-500/50 decoration-2">静态展示</span><br/>
-            到 <span className="text-gold-400">动态洞察</span>
+            從<span className="text-neutral-500 line-through decoration-gold-500/50 decoration-2">靜態展示</span><br/>
+            到 <span className="text-gold-400">動態洞察</span>
           </h2>
           
           <div className="space-y-8">
             <div className="pl-6 border-l border-neutral-800">
-              <h4 className="text-neutral-500 text-sm font-mono uppercase tracking-wider mb-2">现状</h4>
-              <p className="text-neutral-300 text-lg">现有沙盘：精美但信息固化。无法实时反映建筑内部的生命体征。</p>
+              <h4 className="text-neutral-500 text-sm font-mono uppercase tracking-wider mb-2">現狀</h4>
+              <p className="text-neutral-300 text-lg">現有沙盤：精美但資訊固化。無法即時反映建築內部的生命體徵。</p>
             </div>
             
             <div className="pl-6 border-l-2 border-gold-500">
-              <h4 className="text-gold-500 text-sm font-mono uppercase tracking-wider mb-2">机遇</h4>
+              <h4 className="text-gold-500 text-sm font-mono uppercase tracking-wider mb-2">機遇</h4>
               <p className="text-white text-xl font-light leading-relaxed">
-                我们的机遇在于融合两者。通过 AR 技术，将 ESG、能耗、安防等复杂数据直观地叠加载物理沙盘之上，赋予建筑生命。
+                我們的機遇在於融合兩者。透過 AR 技術，將 ESG、能耗、安防等複雜數據直觀地疊加載物理沙盤之上，賦予建築生命。
               </p>
             </div>
           </div>

@@ -17,10 +17,10 @@ export const TIMELINE_DATA: TimelineItem[] = [
   {
     id: 'p1',
     phase: 'PHASE 01',
-    title: '激活沙盘，构筑沉浸式体验',
+    title: '激活沙盤，構築沉浸式體驗',
     subtitle: 'Interactive Blueprint (Completed)',
-    description: '通过高精度三维建模与多媒体交互，将物理沙盘数字化。建立基础的日夜模式切换与多语言导览系统。',
-    details: ['高精度三维建模', '多媒体信息交互', '日夜光影切换'],
+    description: '透過高精度三維建模與多媒體交互，將物理沙盤數位化。建立基礎的日夜模式切換與多語言導覽系統。',
+    details: ['高精度三維建模', '多媒體資訊交互', '日夜光影切換'],
     icon: Box,
     status: 'completed',
     image: 'https://i.ibb.co/KxXvTfdN/IMG-6442.jpg'
@@ -28,13 +28,13 @@ export const TIMELINE_DATA: TimelineItem[] = [
   {
     id: 'p2',
     phase: 'PHASE 02',
-    title: '注入数据，升级为可视化决策中心',
+    title: '注入數據，升級為視覺化決策中心',
     subtitle: 'Data Twin & Visual Decision Center',
-    description: '不再是静止的模型。我们将ESG能耗、安防监控及客流数据实时叠加于物理空间之上，让看不见的数据“被看见”。',
+    description: '不再是靜止的模型。我們將ESG能耗、安防監控及客流數據即時疊加於物理空間之上，讓看不見的數據「被看見」。',
     details: [
-      'ESG与能源可视化：实时能耗与碳排数据叠加',
-      '安全与应急演练：可视化疏散路径与设备状态',
-      '客流高峰导向：模拟并展示最佳流线路径'
+      'ESG與能源視覺化：即時能耗與碳排數據疊加',
+      '安全與應急演練：視覺化疏散路徑與設備狀態',
+      '客流高峰導向：模擬並展示最佳流線路徑'
     ],
     icon: Layers,
     status: 'active',
@@ -43,17 +43,17 @@ export const TIMELINE_DATA: TimelineItem[] = [
   {
     id: 'p3',
     phase: 'PHASE 03',
-    title: '迈向未来，与智慧空间对话',
+    title: '邁向未來，與智慧空間對話',
     subtitle: 'Conversational Space (AI/LLM)',
-    description: '融合大语言模型 (LLM)，让建筑拥有“大脑”。管理者可以通过自然语言与建筑对话，获取前瞻性洞察与模拟预测。',
+    description: '融合大語言模型 (LLM)，讓建築擁有「大腦」。管理者可以透過自然語言與建築對話，獲取前瞻性洞察與模擬預測。',
     details: [
-      'LLM 空间上下位助理：即时回答“这栋楼上个月能耗是多少？”',
-      '即时信息问答：快速获取招商卖点、应急SOP',
-      '模拟与预测：进行客流高峰模拟或应急事件推演'
+      'LLM 空間上下位助理：即時回答「這棟樓上個月能耗是多少？」',
+      '即時資訊問答：快速獲取招商賣點、應急SOP',
+      '模擬與預測：進行客流高峰模擬或應急事件推演'
     ],
     icon: MessageSquare,
     status: 'future',
-    image: 'https://picsum.photos/801/601?grayscale&blur=2'
+    image: 'https://i.ibb.co/R49yw2G2/0-2.png'
   }
 ];
 
@@ -61,7 +61,7 @@ export const TECH_SPECS: TechSpec[] = [
   {
     label: 'Rendering Engine',
     value: 'Unreal Engine 4',
-    description: '', // Removed description as requested
+    description: '', 
     icon: Globe
   },
   {

@@ -30,8 +30,8 @@ export const Hero: React.FC = () => {
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight leading-tight mb-6"
         >
-          <span className="block text-white">空间即界面</span>
-          <span className="block text-gradient-gold text-4xl md:text-6xl mt-2">AR沙盘与智慧建筑的融合新生</span>
+          <span className="block text-white">空間即介面</span>
+          <span className="block text-gradient-gold text-4xl md:text-6xl mt-2">AR沙盤與智慧建築的融合新生</span>
         </motion.h1>
 
         <motion.p
@@ -40,7 +40,7 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-neutral-400 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto"
         >
-          上海远企大楼 AR项目扩展方案 • 从静态展示到动态洞察
+          上海遠企大樓 AR專案擴充方案 • 從靜態展示到動態洞察
         </motion.p>
       </div>
 
