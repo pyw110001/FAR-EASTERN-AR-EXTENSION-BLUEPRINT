@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-4xl mx-auto px-6 flex flex-col items-center">
         {/* Logo Image Replacement */}
         <img 
-          src="https://i.ibb.co/jkwFrZdp/Screen-Shot-2026-01-07-163715-302.png" 
+          src="https://i.ibb.co/B2svMC5v/LOGO-BK.png" 
           alt="Far Eastern Group" 
           className="h-12 md:h-14 mb-6 opacity-90 hover:opacity-100 transition-opacity"
         />
