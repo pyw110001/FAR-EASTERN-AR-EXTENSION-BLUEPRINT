@@ -33,8 +33,7 @@ export const TIMELINE_DATA: TimelineItem[] = [
     description: '不再是靜止的模型。我們將ESG能耗、安防監控及客流數據即時疊加於物理空間之上，讓看不見的數據「被看見」。',
     details: [
       'ESG與能源視覺化：即時能耗與碳排數據疊加',
-      '安全與應急演練：視覺化疏散路徑與設備狀態',
-      '客流高峰導向：模擬並展示最佳流線路徑'
+      '安全與應急演練：視覺化疏散路徑與設備狀態'
     ],
     icon: Layers,
     status: 'active',
@@ -47,9 +46,8 @@ export const TIMELINE_DATA: TimelineItem[] = [
     subtitle: 'Conversational Space (AI/LLM)',
     description: '融合大語言模型 (LLM)，讓建築擁有「大腦」。管理者可以透過自然語言與建築對話，獲取前瞻性洞察與模擬預測。',
     details: [
-      'LLM 空間上下位助理：即時回答「這棟樓上個月能耗是多少？」',
-      '即時資訊問答：快速獲取招商賣點、應急SOP',
-      '模擬與預測：進行客流高峰模擬或應急事件推演'
+      '基於LLM的AI助理：即時回答「這棟樓上個月能耗是多少？」',
+      '即時資訊問答：快速獲取招商賣點、應急SOP'
     ],
     icon: MessageSquare,
     status: 'future',

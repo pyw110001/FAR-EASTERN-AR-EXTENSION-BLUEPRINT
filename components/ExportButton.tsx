@@ -1,49 +1,54 @@
 import React, { useState } from 'react';
-import { Download, Loader2 } from 'lucide-react';
+import { Loader2, Image as ImageIcon } from 'lucide-react';
 import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
 
-interface ExportButtonProps {
-  targetRef: React.RefObject<HTMLDivElement>;
+interface Section {
+  name: string;
+  ref: React.RefObject<HTMLDivElement | null>;
 }
 
-export const ExportButton: React.FC<ExportButtonProps> = ({ targetRef }) => {
+interface ExportButtonProps {
+  sections: Section[];
+}
+
+export const ExportButton: React.FC<ExportButtonProps> = ({ sections }) => {
   const [isExporting, setIsExporting] = useState(false);
 
   const handleExport = async () => {
-    if (!targetRef.current) return;
     setIsExporting(true);
 
     try {
-      const element = targetRef.current;
-      
-      // Temporary style adjustments for better capture
-      const originalStyle = element.style.transform;
-      element.style.transform = "none"; // Reset scroll transforms if any
+      // Iterate through each section and export as PNG
+      for (const section of sections) {
+        if (!section.ref.current) continue;
+        
+        const element = section.ref.current;
+        
+        // Use html2canvas to capture the element
+        const canvas = await html2canvas(element, {
+          scale: 2, // High resolution for better quality
+          useCORS: true, // Enable CORS for external images
+          backgroundColor: '#0a0a0a', // Force background color
+          logging: false,
+        });
 
-      const canvas = await html2canvas(element, {
-        scale: 2, // High resolution
-        useCORS: true,
-        backgroundColor: '#0a0a0a', // Ensure dark background
-        logging: false,
-        allowTaint: true,
-      });
-
-      // Restore styles
-      element.style.transform = originalStyle;
-
-      const imgData = canvas.toDataURL('image/jpeg', 0.9);
-      const pdf = new jsPDF({
-        orientation: 'portrait',
-        unit: 'px',
-        format: [canvas.width, canvas.height]
-      });
-
-      pdf.addImage(imgData, 'JPEG', 0, 0, canvas.width, canvas.height);
-      pdf.save('FarEastern_AR_Blueprint.pdf');
+        // Convert to data URL
+        const imgData = canvas.toDataURL('image/png');
+        
+        // Create a temporary link to trigger download
+        const link = document.createElement('a');
+        link.href = imgData;
+        link.download = `FarEastern_${section.name}.png`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        // Small delay to prevent browser throttling downloads
+        await new Promise(resolve => setTimeout(resolve, 300));
+      }
     } catch (error) {
       console.error('Export failed', error);
-      alert('Failed to generate PDF. Please try again.');
+      alert('Failed to generate PNGs. Please check console for details.');
     } finally {
       setIsExporting(false);
     }
@@ -58,12 +63,12 @@ export const ExportButton: React.FC<ExportButtonProps> = ({ targetRef }) => {
       {isExporting ? (
         <>
           <Loader2 className="w-5 h-5 animate-spin" />
-          <span>Generating...</span>
+          <span>Processing...</span>
         </>
       ) : (
         <>
-          <Download className="w-5 h-5" />
-          <span>Download Blueprint</span>
+          <ImageIcon className="w-5 h-5" />
+          <span>Export PNGs</span>
         </>
       )}
     </button>
